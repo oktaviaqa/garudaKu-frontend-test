@@ -15,7 +15,7 @@
                         sapiente eveniet quibusdam.
                     </p>
 
-                    <a href="#">Read More <span>>></span></a>
+                    <router-link to="/detail">Read More <span>>></span></router-link>
                 </div>
             </article>
         </div>
