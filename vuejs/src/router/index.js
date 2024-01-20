@@ -11,8 +11,8 @@ const routes = [
     component: HomeView,
   },
   // {
-  //   path: "/about",
-  //   name: "about",
+  //   path: "/detail",
+  //   name: "detail",
   //   component: function () {
   //     return import("../views/AboutView.vue");
   //   },
