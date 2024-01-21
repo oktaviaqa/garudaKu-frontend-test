@@ -32,7 +32,8 @@ import { formatCustomDate } from '@/utils/dateUtils'
 export default {
     components: {
         SectionBottom
-    }    props: ['newsData'],
+    },
+    props: ['newsData'],
     computed: {
         formattedDate() {
             return formatCustomDate(this.newsData.pubDate);
