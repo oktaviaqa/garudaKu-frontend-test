@@ -276,7 +276,7 @@ main a:hover {
 
 .border-subheading {
   margin-left: 30px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   border-bottom: 5px solid #cc0000;
   max-width: 100px;
 }

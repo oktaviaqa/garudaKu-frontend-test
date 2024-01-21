@@ -6,7 +6,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: () => ({
-    baseUrl: 'https://api-berita-indonesia.vercel.app/cnbc/tech',
+    baseUrl: 'https://api-berita-indonesia.vercel.app/cnn/teknologi',
     news: [],
   }),
   getters: {},

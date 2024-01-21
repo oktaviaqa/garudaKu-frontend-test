@@ -1,11 +1,8 @@
 <template>
   <div>
     <Header />
-    <!-- <p>Hello</p> -->
-    <!-- <img v-for="data in news.data.posts" :key="data.link" :src=data.thumbnail> -->
-    <!-- </div> -->
     <main>
-      <SectionLeftMain />
+      <SectionLeftMain :newsData="news.data.posts[0]" />
 
       <SectionRightMain />
     </main>
