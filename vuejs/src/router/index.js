@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import DetailView from "../views/DetailView.vue"
+import EditView from '@/views/EditView.vue'
 Vue.use(VueRouter);
 
 const routes = [
@@ -11,17 +12,15 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/detail",
+    path: "/detail/:title",
     name: "detail",
     component: DetailView
+  },
+  {
+    path: '/edit/:title',
+    name: 'edit',
+    component: EditView
   }
-  // {
-  //   path: "/detail",
-  //   name: "detail",
-  //   component: function () {
-  //     return import("../views/AboutView.vue");
-  //   },
-  // },
 ];
 
 const router = new VueRouter({

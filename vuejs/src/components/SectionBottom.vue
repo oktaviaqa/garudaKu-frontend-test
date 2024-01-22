@@ -1,37 +1,36 @@
 <template>
-    <div class="container-bottom-left">
-        <article>
-            <img src="images/bottom-left-1.jpg" />
-            <div>
-                <h3>Best smart speakers for the year</h3>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Commodi iure modi animi cupiditate. Explicabo, nihil?
-                </p>
+    <article v-if="isToday(data.pubDate)">
+        <router-link :to="'/detail/' + data.title">
+            <img :src="data.thumbnail" />
 
-                <a href="#">Read More <span>>></span></a>
-            </div>
-        </article>
+        </router-link>
+        <div>
+            <router-link :to="'/detail/' + data.title">
+                <h3>{{ data.title }}</h3>
 
-        <article>
-            <img src="images/bottom-left-2.jpg" />
-            <div>
-                <h3>
-                    iPad Pro, reviewed: Has the iPad become my main computer now?
-                </h3>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Commodi iure modi animi cupiditate. Explicabo, nihil?
-                </p>
-
-                <a href="#">Read More <span>>></span></a>
-            </div>
-        </article>
-    </div>
+            </router-link>
+            <p>
+                {{ truncateDescription(data.description, 10) }}
+            </p>
+            <!-- <a href="#">Read More <span>>></span></a> -->
+        </div>
+    </article>
 </template>
 
 <script>
+import { isToday } from '@/utils/isToday';
 export default {
-
+    props: ['data'],
+    methods: {
+        truncateDescription(description, wordCount) {
+            const words = description.split(' ');
+            if (words.length > wordCount) {
+                return words.slice(0, wordCount).join(' ') + '...';
+            } else {
+                return description;
+            }
+        },
+        isToday
+    }
 }
 </script>

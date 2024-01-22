@@ -9,7 +9,11 @@ export default new Vuex.Store({
     baseUrl: 'https://api-berita-indonesia.vercel.app/cnn/teknologi',
     news: [],
   }),
-  getters: {},
+  getters: {
+    getNewsByTitle: (state) => (title) => {
+      return state.news.data.posts.find(news => news.title === title);
+    }
+  },
   mutations: {
     setNews(state, data) {
       state.news = data
