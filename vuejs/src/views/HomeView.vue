@@ -4,7 +4,11 @@
     <main>
       <SectionLeftMain :newsData="news.data.posts[0]" />
 
-      <SectionRightMain />
+      <section class="main-container-right">
+        <h2>Latest News </h2>
+        <div class="border-subheading"></div>
+        <SectionRightMain v-for="data in news.data.posts" :key="data.link" :data="data" />
+      </section>
     </main>
   </div>
 </template>

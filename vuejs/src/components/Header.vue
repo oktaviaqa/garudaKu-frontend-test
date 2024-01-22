@@ -21,7 +21,7 @@
             </div>
 
             <!-- nav bar -->
-            <Navbar />
+            <!-- <Navbar /> -->
 
         </div>
     </header>

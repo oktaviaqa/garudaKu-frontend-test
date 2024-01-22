@@ -246,7 +246,7 @@ hr {
 /** main ***/
 
 main a {
-  padding: 15px 0;
+  /* padding: 15px 0; */
   display: block;
   transition: all 0.5s;
 }
@@ -419,6 +419,12 @@ main a:hover {
   margin-bottom: 30px;
   border-bottom: 5px solid #cc0000;
   max-width: 100px;
+}
+
+.button-edit {
+  padding: 3px 5px;
+  border-radius: 5px;
+  font-size: 15px;
 }
 
 /****** article - detail *****/
